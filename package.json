@@ -1,0 +1,25 @@
+{
+  "name": "@paradewisokto2024/database",
+  "version": "1.0.0",
+  "description": "Database schema for Parade Wisuda Oktober 2024 ITB",
+  "scripts": {
+    "migrate-dev": "prisma migrate dev",
+    "migrate-deploy": "prisma migrate deploy",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "schema": "schema.prisma"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prisma": "^5.18.0",
+    "@prisma/client": "^5.18.0",
+    "dotenv-cli": "^7.4.2",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "prisma": "^5.18.0",
+    "@prisma/client": "^5.18.0"
+  }
+}
