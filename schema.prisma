@@ -33,6 +33,7 @@ model Profile {
   id      String  @id @default(uuid())
   name    String
   faculty String? @db.VarChar(50)
+  major   String? @db.VarChar(50)
   campus  String?
   user    User    @relation(fields: [userId], references: [id])
   userId  String  @unique
