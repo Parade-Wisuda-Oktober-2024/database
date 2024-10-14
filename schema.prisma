@@ -27,6 +27,7 @@ model User {
 
   TA   TA[]
   like Like[]
+  WOA  WOA[]
 }
 
 model Profile {
@@ -64,9 +65,9 @@ model Like {
 }
 
 model WOA {
-  id     String @id @default(uuid())
-  to     String 
-  content String
-
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [to], references: [id])
+  to        String
+  content   String
   createdAt DateTime @default(now())
 }
