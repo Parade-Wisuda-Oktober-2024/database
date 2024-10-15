@@ -65,10 +65,12 @@ model Like {
 }
 
 model WOA {
-  id      String @id @default(uuid())
+  id      String  @id @default(uuid())
   userId  String
-  user    User   @relation(fields: [userId], references: [id])
-  content String
+  sender  String?
+  anon    Boolean
+  user    User    @relation(fields: [userId], references: [id])
+  content String  @db.Text
 
   createdAt DateTime @default(now())
 }
