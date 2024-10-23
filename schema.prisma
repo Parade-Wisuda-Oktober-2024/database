@@ -54,6 +54,14 @@ model TA {
   updatedAt DateTime @updatedAt
 }
 
+model WoA {
+  id      String @id @default(uuid())
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
+  sender  String @db.VarChar(50)
+  content String
+}
+
 model Like {
   id     String @id @default(uuid())
   TA     TA     @relation(fields: [taId], references: [id])
